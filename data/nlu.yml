@@ -96,7 +96,3 @@ nlu:
     - 너는 사람이야?
     - 나는 봇과 대화하고 있어?
     - 나는 사람과 대화하고 있어?
-
-- intent: mood_error
-  examples: |
-    -
