@@ -1,0 +1,34 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "안녕~ 오늘은 어땟어?"
+
+  utter_cheer_up:
+  - text: "이거보면 기분이 좋아질야 밑에 링크 복사해서 검색해봐."
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "이게 너에게 도움이 되었니?"
+
+  utter_happy:
+  - text: "좋아~"
+
+  utter_goodbye:
+  - text: "잘가~~ (rasa bot end...)"
+
+  utter_iamabot:
+  - text: "나는 봇 .. 내심장은 rasa 아버지는 ice"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

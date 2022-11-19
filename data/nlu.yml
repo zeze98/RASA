@@ -1,0 +1,102 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - 안녕
+    - 하이루
+    - 안뇽
+    - ㅎㅇ
+    - 안녕하세요
+    - 좋은아침
+    - 가자
+    - good morning
+    - hi
+    - let's go
+    - 안녕친구
+    - 좋은아침
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - 또봐
+    - 잘가
+    - 다음에 보자
+    - 잘자
+    - bye
+    - goodbye
+    - 좋은하루 보내
+    - 다음에 또 보자
+    - 다음에 보자
+    - see you later
+    - 끝
+    - 종료
+    - 바이
+    - 좋은 시간이었어
+    - 갈게
+    - ㅂㅂ
+
+- intent: affirm
+  examples: |
+    - 그래
+    - 응
+    - ㅇㅇ
+    - 당연하지
+    - 좋은데
+    - 맞아
+
+- intent: deny
+  examples: |
+    - 아니
+    - ㄴㄴ
+    - 전혀
+    - 그건 아닌거 같아
+    - 맘에 안들어
+    - 전혀 아니야
+    - 아닌거 같아
+
+- intent: mood_great
+  examples: |
+    - 완벽해
+    - 훌륭해
+    - 놀라워
+    - feeling like a king
+    - 환상적이야
+    - 나는 지금 기분 좋아
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - 나 너무 슬퍼
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - 슬퍼
+    - 매우 슬퍼
+    - 행복하지 않아
+    - 별로
+    - 별로 좋지 않아
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - 너는 봇이야?
+    - 너는 사람이야?
+    - 나는 봇과 대화하고 있어?
+    - 나는 사람과 대화하고 있어?
+
+- intent: mood_error
+  examples: |
+    -
