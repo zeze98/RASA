@@ -8,7 +8,7 @@ language: ko
 
 pipeline:
   - name: SpacyNLP
-    model: ko_core_news_sm
+    model: ko_core_news_lg
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
     pooling: mean
