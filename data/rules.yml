@@ -1,7 +1,6 @@
-version: "3.0"
+version: "3.1"
 
 rules:
-
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -12,3 +11,22 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: fallback
+  steps:
+    - intent: nlu_fallback
+    - action: utter_default
+
+- rule: Activate form
+  steps:
+    - intent: greet
+    - action: utter_askname
+    - action: name_form
+    - active_loop: name_form
+
+#- rule: Check form
+#  steps:
+#    - action: name_form
+#    - active_loop: null
+#    - slot_was_set:
+#        - requested_slot: null
+#    - action: utter_checkname

@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.1"
 
 nlu:
 - intent: greet
@@ -10,13 +10,9 @@ nlu:
     - 안녕하세요
     - 좋은아침
     - 가자
-    - good morning
     - hi
-    - let's go
     - 안녕친구
     - 좋은아침
-    - goodevening
-    - good afternoon
 
 - intent: goodbye
   examples: |
@@ -55,6 +51,8 @@ nlu:
     - 맘에 안들어
     - 전혀 아니야
     - 아닌거 같아
+    - 틀려
+    - 틀렸어
 
 - intent: mood_great
   examples: |
@@ -96,3 +94,8 @@ nlu:
     - 너는 사람이야?
     - 나는 봇과 대화하고 있어?
     - 나는 사람과 대화하고 있어?
+
+- intent: name
+  examples: |
+    - {name}
+    - 내 이름은 {name} 이야

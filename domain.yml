@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.1"
 
 intents:
   - greet
@@ -9,9 +9,30 @@ intents:
   - mood_unhappy
   - bot_challenge
 
+entities:
+  - name
+
+slots:
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+forms:
+  name_form:
+    required_slots:
+      - name
+
 responses:
+
+  utter_askname:
+    - text: "사용하실 닉네임을 입력해주세요"
+
+  utter_checkname:
+    - text: "{name}님이 맞나요?"
+
   utter_greet:
-  - text: "안녕~ 오늘은 어땟어?"
+  - text: "안녕하세요 {name}님 오늘은 어떠셨나요?"
 
   utter_cheer_up:
   - text: "이거보면 기분이 좋아질야 밑에 링크 복사해서 검색해봐."
@@ -24,10 +45,17 @@ responses:
   - text: "좋아~"
 
   utter_goodbye:
-  - text: "잘가~~ (rasa bot end...)"
+  - text: "안녕히가세요 {name}님 (rasa bot end...)"
 
   utter_iamabot:
   - text: "나는 봇 .. 내심장은 rasa 아버지는 ice"
+
+  utter_default:
+    - text: "죄송합니다 잘 이해하지 못했습니다. 다시 입력해 주세요."
+
+actions:
+  - action_set_name
+  - action_check_name
 
 session_config:
   session_expiration_time: 60
