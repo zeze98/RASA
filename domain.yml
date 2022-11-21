@@ -24,6 +24,12 @@ slots:
       - active_loop: ask_nickname_form
       not_intent:
       - bot_challenge
+      - greet
+      - goodbye
+      - start
+      - fallback
+      - affirm
+      - deny
 
 forms:
   ask_nickname_form:
@@ -59,6 +65,9 @@ responses:
 
   utter_default:
     - text: "죄송합니다 잘 이해하지 못했습니다. 다시 입력해 주세요."
+
+  utter_rename:
+    - text: "닉네임을 잘못 입력하셨나 보네요. '시작' 부터 다시 입력해주세요."
 
 actions:
   - action_set_name

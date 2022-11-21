@@ -12,8 +12,6 @@ nlu:
     - [주노](nickname)
     - [여재우](nickname)
     - [재우](nickname)
-    - [양기주](nickname)
-    - [기주](nickname)
 
 - intent: start
   examples: |
@@ -37,21 +35,15 @@ nlu:
 
 - intent: goodbye
   examples: |
-    - 또봐
     - 잘가
     - 다음에 보자
-    - 잘자
     - bye
     - goodbye
-    - 좋은하루 보내
-    - 다음에 또 보자
     - 다음에 보자
     - see you later
     - 끝
     - 종료
     - 바이
-    - 좋은 시간이었어
-    - 갈게
     - ㅂㅂ
 
 - intent: affirm
@@ -59,8 +51,6 @@ nlu:
     - 그래
     - 응
     - ㅇㅇ
-    - 당연하지
-    - 좋은데
     - 맞아
     - 네
     - 동의
@@ -69,11 +59,6 @@ nlu:
     - 오케
     - 오케이
     - ㅇㅋ
-    - 으응
-    - 우웅
-    - 글치
-    - 좋네
-
 
 - intent: deny
   examples: |
@@ -87,8 +72,7 @@ nlu:
     - 틀려
     - 틀렸어
     - 아니요
-    - 아닙니다
-    - 땡
+
 
 - intent: mood_great
   examples: |
@@ -98,31 +82,17 @@ nlu:
     - feeling like a king
     - 환상적이야
     - 나는 지금 기분 좋아
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
     - 나 너무 슬퍼
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
     - 슬퍼
     - 매우 슬퍼
     - 행복하지 않아
     - 별로
     - 별로 좋지 않아
-    - extremly sad
-    - so saad
-    - so sad
+
 
 - intent: bot_challenge
   examples: |

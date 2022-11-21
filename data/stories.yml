@@ -1,7 +1,7 @@
 version: "3.1"
 
 stories:
-  - story: start path
+  - story: start path true
     steps:
       - intent: start
       - action: utter_ask_nickname
@@ -13,3 +13,17 @@ stories:
       - action: utter_check_nickname
       - intent: affirm
       - action: utter_greet
+
+
+  - story: start path false
+    steps:
+      - intent: start
+      - action: utter_ask_nickname
+      - intent: saying_nickname
+      - action: ask_nickname_form
+      - slot_was_set:
+          - requested_slot: nickname
+      - active_loop: null
+      - action: utter_check_nickname
+      - intent: deny
+      - action: utter_rename
