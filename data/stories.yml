@@ -13,3 +13,4 @@ stories:
       - active_loop: null
       - action: utter_check_nickname
       - intent: affirm
+      - action: utter_greet

@@ -39,7 +39,7 @@ responses:
     - text: "{nickname}님이 맞나요?"
 
   utter_greet:
-  - text: "안녕하세요 반가워요."
+  - text: "안녕하세요{nickname}님 반가워요."
 
   utter_cheer_up:
   - text: "이거보면 기분이 좋아질야 밑에 링크 복사해서 검색해봐."
