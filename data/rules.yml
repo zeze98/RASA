@@ -18,10 +18,10 @@ rules:
 
 - rule: Activate form
   steps:
-    - intent: greet
-    - action: utter_askname
-    - action: name_form
-    - active_loop: name_form
+    - intent: start
+    - action: utter_ask_nickname
+    - action: ask_nickname_form
+    - active_loop: ask_nickname_form
 
 #- rule: Check form
 #  steps:

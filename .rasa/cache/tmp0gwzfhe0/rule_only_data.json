@@ -1,0 +1,6 @@
+{
+  "rule_only_slots": [],
+  "rule_only_loops": [
+    "ask_nickname_form"
+  ]
+}

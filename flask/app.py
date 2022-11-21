@@ -2,7 +2,8 @@ from flask import Flask, render_template, request, jsonify
 import os, sys, requests, json
 from random import randint
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder= 'Templates')
+context_set = ""
 
 
 @app.route('/')
@@ -11,6 +12,8 @@ def home():
 
 
 @app.route('/parse', methods=['POST', 'GET'])
+def index():
+    return render_template('index.html',val = val)
 def extract():
     text = str(request.form.get('value1'))
     payload = json.dumps({"sender": "Rasa", "message": text})

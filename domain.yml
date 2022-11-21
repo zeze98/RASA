@@ -8,31 +8,37 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - start
 
 entities:
-  - name
+  - nickname
 
 slots:
-  name:
+  nickname:
     type: text
+    influence_conversation: true
     mappings:
-      - type: from_entity
-        entity: name
+    - type: from_text
+      conditions:
+      - active_loop: ask_nickname_form
+      not_intent:
+      - bot_challenge
+
 forms:
-  name_form:
+  ask_nickname_form:
     required_slots:
-      - name
+      - nickname
 
 responses:
 
-  utter_askname:
+  utter_ask_nickname:
     - text: "사용하실 닉네임을 입력해주세요"
 
-  utter_checkname:
+  utter_check_nickname:
     - text: "{name}님이 맞나요?"
 
   utter_greet:
-  - text: "안녕하세요 {name}님 오늘은 어떠셨나요?"
+  - text: "안녕하세요 반가워요."
 
   utter_cheer_up:
   - text: "이거보면 기분이 좋아질야 밑에 링크 복사해서 검색해봐."

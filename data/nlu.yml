@@ -1,6 +1,13 @@
 version: "3.1"
 
 nlu:
+- intent: start
+  examples: |
+    - 시작
+    - 시작이요
+    - 시이작
+    - start
+
 - intent: greet
   examples: |
     - 안녕
@@ -41,6 +48,18 @@ nlu:
     - 당연하지
     - 좋은데
     - 맞아
+    - 네
+    - 동의
+    - y
+    - 예스
+    - 오케
+    - 오케이
+    - ㅇㅋ
+    - 으응
+    - 우웅
+    - 글치
+    - 좋네
+
 
 - intent: deny
   examples: |
@@ -53,6 +72,9 @@ nlu:
     - 아닌거 같아
     - 틀려
     - 틀렸어
+    - 아니요
+    - 아닙니다
+    - 땡
 
 - intent: mood_great
   examples: |
@@ -94,6 +116,7 @@ nlu:
     - 너는 사람이야?
     - 나는 봇과 대화하고 있어?
     - 나는 사람과 대화하고 있어?
+    - 누구랑 대화하는 거지?
 
 - intent: name
   examples: |
