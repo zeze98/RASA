@@ -1,6 +1,20 @@
 version: "3.1"
 
 nlu:
+
+- intent: saying_nickname
+  examples: |
+    - [박현도](nickname)
+    - [현도](nickname)
+    - [정헌영](nickname)
+    - [허녕](nickname)
+    - [김준호](nickname)
+    - [주노](nickname)
+    - [여재우](nickname)
+    - [재우](nickname)
+    - [양기주](nickname)
+    - [기주](nickname)
+
 - intent: start
   examples: |
     - 시작

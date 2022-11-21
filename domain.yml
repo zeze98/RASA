@@ -9,6 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - start
+  - saying_nickname
 
 entities:
   - nickname
@@ -35,7 +36,7 @@ responses:
     - text: "사용하실 닉네임을 입력해주세요"
 
   utter_check_nickname:
-    - text: "{name}님이 맞나요?"
+    - text: "{nickname}님이 맞나요?"
 
   utter_greet:
   - text: "안녕하세요 반가워요."

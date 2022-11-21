@@ -16,12 +16,12 @@ rules:
     - intent: nlu_fallback
     - action: utter_default
 
-- rule: Activate form
-  steps:
-    - intent: start
-    - action: utter_ask_nickname
-    - action: ask_nickname_form
-    - active_loop: ask_nickname_form
+#- rule: Activate form
+#  steps:
+#    - intent: start
+#    - action: utter_ask_nickname
+#    - action: ask_nickname_form
+#    - active_loop: ask_nickname_form
 
 #- rule: Check form
 #  steps:
