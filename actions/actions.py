@@ -53,5 +53,5 @@ class ActionCheckName(Action):
         if intent == "affirm":
             return [SlotSet("CheckName", True)]
         elif intent == "deny":
-            return [SlotSet("ChckName", False)]
+            return [SlotSet("CheckName", False)]
         return []

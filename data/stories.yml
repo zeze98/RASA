@@ -4,7 +4,6 @@ stories:
   - story: start path
     steps:
       - intent: start
-      - action: utter_greet
       - action: utter_ask_nickname
       - intent: saying_nickname
       - action: ask_nickname_form
