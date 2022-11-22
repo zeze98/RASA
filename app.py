@@ -12,12 +12,12 @@ def home():
 
 @app.route("/get")
 def get_bot_response():
-    Text = str(request.args.get('msg'))
-    data = json.dumps({"sender": "Rasa", "message": Text})
+    text = str(request.args.get('msg'))
+    data = json.dumps({"sender": "Rasa", "message": text})
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
     response = requests.post('http://localhost:5005/webhooks/rest/webhook', data=data, headers=headers)
     response = response.json()
-    return str(response[0]['text'])
+    return str('Rasa: ' + response[0]['text'])
 
 
 if __name__ == "__main__":

@@ -1,23 +1,24 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - start
-  - saying_nickname
-
+- affirm
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- saying_hobby
+- saying_nickname
+- start
+- answer_why
+- answer_when
 entities:
-  - nickname
-
+- hobby
+- nickname
 slots:
   nickname:
     type: text
-    influence_conversation: true
+    influence_conversation: false
     mappings:
     - type: from_text
       conditions:
@@ -30,49 +31,58 @@ slots:
       - fallback
       - affirm
       - deny
-
+  hobby:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: hobby
 forms:
   ask_nickname_form:
     required_slots:
-      - nickname
-
+    - nickname
+  ask_hobby_form:
+    required_slots:
+    - hobby
 responses:
-
   utter_ask_nickname:
-    - text: "사용하실 닉네임을 입력해주세요"
-
+  - text: 사용하실 닉네임을 입력해주세요
   utter_check_nickname:
-    - text: "{nickname}님이 맞나요?"
-
+  - text: '{nickname}님이 맞나요?'
   utter_greet:
-  - text: "안녕하세요~ {nickname}님 반가워요."
-
+  - text: 안녕하세요~ {nickname}님 반가워요.
   utter_cheer_up:
-  - text: "힘이날만한 사진을 찾았어요."
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - text: 힘이날만한 사진을 찾았어요.
+    image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: "{nickname}님에게 도움이 되었나요?"
-
+  - text: '{nickname}님에게 도움이 되었나요?'
   utter_happy:
-  - text: "좋아~"
-
+  - text: 좋아~
   utter_goodbye:
-  - text: "안녕히가세요 {nickname}님 (rasa bot end...)"
-
+  - text: 안녕히가세요 {nickname}님 (rasa bot end...)
   utter_iamabot:
-  - text: "나는 봇 .. 내심장은 rasa 아버지는 ice"
-
+  - text: 나는 봇 .. 내심장은 rasa 아버지는 ice
   utter_default:
-    - text: "죄송합니다 잘 이해하지 못했습니다. 다시 입력해 주세요."
-
+  - text: 죄송합니다 잘 이해하지 못했습니다. 다시 입력해 주세요.
   utter_rename:
-    - text: "닉네임을 잘못 입력하셨나 보네요. '시작' 부터 다시 입력해주세요."
+  - text: 닉네임을 잘못 입력하셨나 보네요. '시작' 부터 다시 입력해주세요.
+  utter_askhobby:
+  - text: 안녕하세요 {nickname}님~ {nickname}님은 취미로 무엇을 하는게 좋으신가요?
+  utter_askwhy:
+  - text: '{hobby} 좋은 이유가 뭔가요?'
+  utter_askwhen:
+  - text: 어떨때 많이 하나요?
+  utter_tanks_for_answer:
+  - text: "{nickname}님이 좋아하시는 것에 대해서 너무 잘 말씀해주셔서 감사합니다.\n 덕분에 제가 {nickname}님에 대해서 조금 더 잘 알게 된 것 같아요 :)\n 지금부터는 {nickname}님께서 오늘 저에게 해주실 이야기를 처음부터 끝까지 사실 그대로 말씀해주세요"
+
 
 actions:
-  - action_set_name
-  - action_check_name
-
+- action_check_name
+- action_set_name
+- utter_ask_nickname
+- utter_askhobby
+- utter_askwhy
+- utter_check_nickname
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

@@ -1,7 +1,29 @@
 version: "3.1"
-
 nlu:
-
+- intent: answer_when
+  examples: |
+    - 가끔
+    - 시간날때
+    - 그냥 수시로
+    - 때때로
+    - 시간나면 하는거 같아
+    - 종종
+    - 땡길때
+- intent: answer_why
+  examples: |
+    - 물속에 있으면 자유롭다고 느껴
+    - 골 넣으면 짜릿하잖아
+    - 근육을 키우는게 좋아서
+- intent: saying_hobby
+  examples: |
+    - [노래듣기가](hobby) 취미야
+    - 나는 [노래듣기가](hobby) 좋아
+    - 나는 [노래듣기가](hobby) 취미야
+    - [축구하는게](hobby) 취미야
+    - 나는 [축구하는게](hobby) 좋아
+    - 나는 [축구가](hobby) 좋아
+    - 난 [게임이](hobby) 좋아
+    - 난 [축구가](hobby) 좋아
 - intent: saying_nickname
   examples: |
     - [박현도](nickname)
@@ -12,14 +34,19 @@ nlu:
     - [주노](nickname)
     - [여재우](nickname)
     - [재우](nickname)
-
+    - [블랙카우](nickname)
+    - [오구](nickname)
+    - [옴뇸뇸](nickname)
+    - [코코볼](nickname)
+    - [모코코](nickname)
+    - [메시](nickname)
+    - [김메시](nickname)
 - intent: start
   examples: |
     - 시작
     - 시작이요
     - 시이작
     - start
-
 - intent: greet
   examples: |
     - 안녕
@@ -31,21 +58,17 @@ nlu:
     - 가자
     - hi
     - 안녕친구
-    - 좋은아침
-
 - intent: goodbye
   examples: |
     - 잘가
     - 다음에 보자
     - bye
     - goodbye
-    - 다음에 보자
     - see you later
     - 끝
     - 종료
     - 바이
     - ㅂㅂ
-
 - intent: affirm
   examples: |
     - 그래
@@ -59,7 +82,7 @@ nlu:
     - 오케
     - 오케이
     - ㅇㅋ
-
+    - 네 맞아요
 - intent: deny
   examples: |
     - 아니
@@ -72,8 +95,6 @@ nlu:
     - 틀려
     - 틀렸어
     - 아니요
-
-
 - intent: mood_great
   examples: |
     - 완벽해
@@ -82,8 +103,6 @@ nlu:
     - feeling like a king
     - 환상적이야
     - 나는 지금 기분 좋아
-
-
 - intent: mood_unhappy
   examples: |
     - 나 너무 슬퍼
@@ -92,8 +111,6 @@ nlu:
     - 행복하지 않아
     - 별로
     - 별로 좋지 않아
-
-
 - intent: bot_challenge
   examples: |
     - 너는 봇이야?
