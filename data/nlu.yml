@@ -9,21 +9,30 @@ nlu:
     - 시간나면 하는거 같아
     - 종종
     - 땡길때
+    - 매주 수요일에 해요
+    - 시간나면 폰으로 많이해
 - intent: answer_why
   examples: |
     - 물속에 있으면 자유롭다고 느껴
     - 골 넣으면 짜릿하잖아
     - 근육을 키우는게 좋아서
+    - 음악은 나라에서 허락한 유일한 마약이니까
+    - 네트에 골을 넣으면 좋아서
+    - 내가 루미큐브 하는걸 좋아해
 - intent: saying_hobby
   examples: |
     - [노래듣기가](hobby) 취미야
+    - [노래듣기가](hobby) 좋아요
     - 나는 [노래듣기가](hobby) 좋아
     - 나는 [노래듣기가](hobby) 취미야
     - [축구하는게](hobby) 취미야
+    - [축구하는게](hobby) 좋아요
     - 나는 [축구하는게](hobby) 좋아
     - 나는 [축구가](hobby) 좋아
     - 난 [게임이](hobby) 좋아
     - 난 [축구가](hobby) 좋아
+    - [농구가](hobby) 취미야
+    - 나는 [보드게임하는게](hobby) 취미야
 - intent: saying_nickname
   examples: |
     - [박현도](nickname)
@@ -41,6 +50,8 @@ nlu:
     - [모코코](nickname)
     - [메시](nickname)
     - [김메시](nickname)
+    - [김라사](nickname)
+    - [오구](nickname)
 - intent: start
   examples: |
     - 시작

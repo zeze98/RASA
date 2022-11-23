@@ -1,6 +1,8 @@
 version: '3.1'
 intents:
 - affirm
+- answer_when
+- answer_why
 - bot_challenge
 - deny
 - goodbye
@@ -10,11 +12,9 @@ intents:
 - saying_hobby
 - saying_nickname
 - start
-- answer_why
-- answer_when
 entities:
-- hobby
 - nickname
+- hobby
 slots:
   nickname:
     type: text
@@ -45,6 +45,8 @@ forms:
     required_slots:
     - hobby
 responses:
+  utter_fallback:
+    - text: "잘못입력하셨습니다."
   utter_ask_nickname:
   - text: 사용하실 닉네임을 입력해주세요
   utter_check_nickname:
@@ -73,16 +75,17 @@ responses:
   utter_askwhen:
   - text: 어떨때 많이 하나요?
   utter_tanks_for_answer:
-  - text: "{nickname}님이 좋아하시는 것에 대해서 너무 잘 말씀해주셔서 감사합니다.\n 덕분에 제가 {nickname}님에 대해서 조금 더 잘 알게 된 것 같아요 :)\n 지금부터는 {nickname}님께서 오늘 저에게 해주실 이야기를 처음부터 끝까지 사실 그대로 말씀해주세요"
-
-
+  - text: |-
+      {nickname}님이 좋아하시는 것에 대해서 너무 잘 말씀해주셔서 감사합니다.
+       덕분에 제가 {nickname}님에 대해서 조금 더 잘 알게 된 것 같아요 :)
+       지금부터는 {nickname}님께서 오늘 저에게 해주실 이야기를 처음부터 끝까지 사실 그대로 말씀해주세요
 actions:
-- action_check_name
-- action_set_name
 - utter_ask_nickname
 - utter_askhobby
+- utter_askwhen
 - utter_askwhy
 - utter_check_nickname
+- utter_tanks_for_answer
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

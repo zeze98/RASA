@@ -25,33 +25,3 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
-from typing import Text, Dict, Any, List
-
-from rasa.shared.core.constants import ACTION_DEFAULT_FALLBACK_NAME
-from rasa_sdk import Action, Tracker
-from rasa_sdk.events import SlotSet, UserUtteranceReverted
-from rasa_sdk.executor import CollectingDispatcher
-
-
-class ActionSetName(Action):
-    def name(self):
-        return "action_set_name"
-
-    def run(self, dispatcher, tracker, domain):
-        name = tracker.get_slot("nickname")
-        dispatcher.utter_message(text=f"name from slots: {name}")
-        return []
-
-
-class ActionCheckName(Action):
-    def name(self):
-        return "action_check_name"
-
-    def run(self, dispatcher, tracker, domain):
-        intent = tracker.latest_action_name["intent"].get("nickname")
-
-        if intent == "affirm":
-            return [SlotSet("CheckName", True)]
-        elif intent == "deny":
-            return [SlotSet("CheckName", False)]
-        return []

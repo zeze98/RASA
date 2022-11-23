@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:sqlite:C:\Users\jwjw5\Desktop\rasa\.rasa\cache\cache.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="cache [2]" uuid="f428a942-ec87-4af2-aaff-497234f3d34e">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\jwjw5\Desktop\GITHUB\RASA\.rasa\cache\cache.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
