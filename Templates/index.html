@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
+	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript">
@@ -10,21 +10,22 @@
 		</script>
 		<link id="one" rel="stylesheet" type="text/css" href="">
 		<link id="two" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link id="three" rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link id="three" rel="shortcut icon" href="{{ url_for('static', filename='bot.ico') }}">
 		<script type="text/javascript">
 			var url = "/static/style.css?q=" + createDynamicURL().toString();
 			$("#one").attr("href", url)
 		</script>
+		<title>김박한여정</title>
 	</head>
 	<body>
-		<h1>김박한여정</h1>
+		<h1>Flask ChatBot</h1>
 		<div id="container">
 			<div id="chatbox">
-				<p class="botText"><span>안녕하세요 김박한여정이 만든 챗봇입니다.</span></p>
-				<p class="botText"><span>시작하시려면 '시작'을 입력해 주세요.</span></p>
+				<p class="botText"><span>Hi! I'm Chatterbot.</span></p>
+				<p class="botText"><span>시작하시려면 '시작' 을 입력해주세요</span></p>
 			</div>
 			<div id="userInput">
-				<input id="textInput" type="text" name="msg" placeholder="여기에 입력해 주세요">
+				<input id="textInput" type="text" name="msg" placeholder="Message">
 				<button id="buttonInput" type="submit"><i class="fa fa-send"></i></button>
 			</div>
 			<script>

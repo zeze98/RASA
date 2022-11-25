@@ -45,6 +45,7 @@ forms:
     required_slots:
     - hobby
 responses:
+
   utter_fallback:
     - text: "잘못입력하셨습니다."
   utter_ask_nickname:
@@ -86,6 +87,8 @@ actions:
 - utter_askwhy
 - utter_check_nickname
 - utter_tanks_for_answer
+- ack_nickname_form
+- ack_hobby_form
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

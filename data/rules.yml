@@ -10,3 +10,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: start option
+  steps:
+    - intent: start
+    - action: utter_ask_nickname

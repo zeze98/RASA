@@ -11,6 +11,9 @@ nlu:
     - 땡길때
     - 매주 수요일에 해요
     - 시간나면 폰으로 많이해
+    - 틈틈이해
+    - 자주하지
+    - 걷거나
 - intent: answer_why
   examples: |
     - 물속에 있으면 자유롭다고 느껴
@@ -19,6 +22,8 @@ nlu:
     - 음악은 나라에서 허락한 유일한 마약이니까
     - 네트에 골을 넣으면 좋아서
     - 내가 루미큐브 하는걸 좋아해
+    - 책을 읽으면 마음이 편안해져
+    - 조용히 혼자 있는게 좋아서
 - intent: saying_hobby
   examples: |
     - [노래듣기가](hobby) 취미야
@@ -33,6 +38,9 @@ nlu:
     - 난 [축구가](hobby) 좋아
     - [농구가](hobby) 취미야
     - 나는 [보드게임하는게](hobby) 취미야
+    - 난 [책읽는게](hobby) 좋아
+    - 난 [독서가](hobby) 좋아
+    - 난 [독서가](hobby) 취미야
 - intent: saying_nickname
   examples: |
     - [박현도](nickname)

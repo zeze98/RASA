@@ -33,6 +33,7 @@ stories:
   - action: utter_check_nickname
   - intent: deny
   - action: utter_rename
+  - intent: start
 
 
 - story: interactive_story_1st
