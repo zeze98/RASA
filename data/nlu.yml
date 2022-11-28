@@ -13,7 +13,7 @@ nlu:
     - 시간나면 폰으로 많이해
     - 틈틈이해
     - 자주하지
-    - 걷거나
+    - 걸어갈때 자주 들어요
 - intent: answer_why
   examples: |
     - 물속에 있으면 자유롭다고 느껴
@@ -41,6 +41,7 @@ nlu:
     - 난 [책읽는게](hobby) 좋아
     - 난 [독서가](hobby) 좋아
     - 난 [독서가](hobby) 취미야
+    - 나는 [노래듣는게](hobby) 좋아
 - intent: saying_nickname
   examples: |
     - [박현도](nickname)
@@ -59,7 +60,8 @@ nlu:
     - [메시](nickname)
     - [김메시](nickname)
     - [김라사](nickname)
-    - [오구](nickname)
+    - [김박한여정](nickname)
+    - [김박한여정](nickname)
 - intent: start
   examples: |
     - 시작

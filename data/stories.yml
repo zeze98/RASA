@@ -22,38 +22,35 @@ stories:
   - intent: answer_when
   - action: utter_tanks_for_answer
 
-- story: nickname_false
-  steps:
-  - intent: start
-  - action: utter_ask_nickname
-  - intent: saying_nickname
-  - action: ask_nickname_form
-  - active_loop: ask_nickname_form
-  - active_loop: null
-  - action: utter_check_nickname
-  - intent: deny
-  - action: utter_rename
-  - intent: start
 
-
-- story: interactive_story_1st
+- story: interactive_story_1
   steps:
   - intent: start
   - action: utter_ask_nickname
   - intent: saying_nickname
     entities:
-      - nickname
+    - nickname: 김박한여정
   - action: ask_nickname_form
   - active_loop: ask_nickname_form
+  - slot_was_set:
+    - nickname: 김박한여정
+  - slot_was_set:
+    - requested_slot: null
   - active_loop: null
   - action: utter_check_nickname
   - intent: affirm
   - action: utter_askhobby
   - intent: saying_hobby
     entities:
-    - hobby
+    - hobby: 노래듣는게
+  - slot_was_set:
+    - hobby: 노래듣는게
   - action: ask_hobby_form
   - active_loop: ask_hobby_form
+  - slot_was_set:
+    - hobby: 노래듣는게
+  - slot_was_set:
+    - requested_slot: null
   - active_loop: null
   - action: utter_askwhy
   - intent: answer_why
