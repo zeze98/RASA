@@ -11,7 +11,7 @@ stories:
   - active_loop: null
   - action: utter_check_nickname
   - intent: affirm
-  - action: utter_askhobby
+  - action: utter_introduce_askhobby
   - intent: saying_hobby
   - action: ask_hobby_form
   - active_loop: ask_hobby_form
@@ -39,10 +39,7 @@ stories:
   - active_loop: null
   - action: utter_check_nickname
   - intent: affirm
-  - action: utter_introduce
-  - action: utter_introduce2
-  - action: utter_askhobby
-  - action: utter_askhobby2
+  - action: utter_introduce_askhobby
   - intent: saying_hobby
     entities:
     - hobby: 노래듣는게
@@ -60,8 +57,6 @@ stories:
   - action: utter_askwhen
   - intent: answer_when
   - action: utter_tanks_for_answer
-  - action: utter_tanks_for_answer2
-  - action: utter_tanks_for_answer3
 
 - story: interactive_story_1
   steps:
