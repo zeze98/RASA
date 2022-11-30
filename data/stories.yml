@@ -39,7 +39,10 @@ stories:
   - active_loop: null
   - action: utter_check_nickname
   - intent: affirm
+  - action: utter_introduce
+  - action: utter_introduce2
   - action: utter_askhobby
+  - action: utter_askhobby2
   - intent: saying_hobby
     entities:
     - hobby: 노래듣는게
@@ -57,3 +60,24 @@ stories:
   - action: utter_askwhen
   - intent: answer_when
   - action: utter_tanks_for_answer
+  - action: utter_tanks_for_answer2
+  - action: utter_tanks_for_answer3
+
+- story: interactive_story_1
+  steps:
+  - intent: start
+  - action: utter_ask_nickname
+  - intent: saying_nickname
+    entities:
+    - nickname: 김박한여정
+  - action: ask_nickname_form
+  - active_loop: ask_nickname_form
+  - slot_was_set:
+    - nickname: 김박한여정
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_check_nickname
+  - intent: deny
+  - action: utter_rename
+  - action: action_restart
