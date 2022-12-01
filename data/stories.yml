@@ -1,29 +1,7 @@
 version: "3.1"
 
 stories:
-- story: test story
-  steps:
-  - intent: start
-  - action: utter_ask_nickname
-  - intent: saying_nickname
-  - action: ask_nickname_form
-  - active_loop: ask_nickname_form
-  - active_loop: null
-  - action: utter_check_nickname
-  - intent: affirm
-  - action: utter_introduce_askhobby
-  - intent: saying_hobby
-  - action: ask_hobby_form
-  - active_loop: ask_hobby_form
-  - active_loop: null
-  - action: utter_askwhy
-  - intent: answer_why
-  - action: utter_askwhen
-  - intent: answer_when
-  - action: utter_tanks_for_answer
-
-
-- story: interactive_story_1
+- story: start_affirm
   steps:
   - intent: start
   - action: utter_ask_nickname
@@ -57,8 +35,10 @@ stories:
   - action: utter_askwhen
   - intent: answer_when
   - action: utter_tanks_for_answer
+  - intent: affirm
+  - action: utter_ask
 
-- story: interactive_story_1
+- story: start_deny
   steps:
   - intent: start
   - action: utter_ask_nickname
