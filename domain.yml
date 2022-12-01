@@ -18,6 +18,16 @@ intents:
 - indecent
 - emotion
 - attacker
+- detail_date
+- say_emotion
+- say_regist
+- deatindate_reason
+- say_cloth
+- indecent2
+- atk+indecent
+- say_date
+- say_number
+- say_location
 entities:
 - nickname
 - hobby
