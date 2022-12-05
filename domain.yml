@@ -132,6 +132,12 @@ forms:
   ask_hobby_form:
     required_slots:
     - hobby
+  ask_date_form:
+    required_slots:
+    - detail_date
+  ask_attacker_form:
+    required_slots:
+    - attacker
 responses:
   utter_fallback:
   - text: '잘못입력하셨습니다.'
@@ -166,6 +172,8 @@ responses:
   - text: '안녕하세요~ 저는 {nickname}님과 대화하고 싶은 챗봇입니다. 오늘 {nickname}님께서 하시고 싶은 이야기를 편하게 저에게 말씀해 주시면 됩니다. :) 대화를 하기전에 가볍게 ice breaking 부터 할까요? {nickname}님은 취미로 무엇을 하는게 좋으신가요?'
   utter_ask:
   - text: '언제 무슨일이 있으셨나요?'
+  utter_after_date:
+  - text: '{detail_date} 누가 그랬나요?'
 actions:
 - utter_ask_nickname
 - utter_introduce_askhobby
@@ -173,6 +181,7 @@ actions:
 - utter_askwhy
 - utter_check_nickname
 - utter_tanks_for_answer
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

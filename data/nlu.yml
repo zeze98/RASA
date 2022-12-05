@@ -177,27 +177,27 @@ nlu:
     - [1번째](number)였어요
 - intent: say_date
   examples: |
-    - [삼월 이십육일](detail_date)이요
-    - [3월 23일](detail_date)이에요
-    - [9월 10일](detail_date)이에요
-    - [삼월 구일 토요일](detail_date)이에요
-    - [오월 사일](detail_date)이에요
-    - [삼월 이십팔일](detail_date) [목요일](detail_date)이요
-    - [6월 5일](detail_date) [목요일](detail_date)이요
-    - [삼월 구일](detail_date)이요
-    - [10월 8일](detail_date)이요
-    - [8월 20일](detail_date)이요
-    - [1월 20일](detail_date)이요
-    - [2월 31일](detail_date)이요
+    - [삼월 이십육일](detail_date) 이요
+    - [3월 23일](detail_date) 이에요
+    - [9월 10일](detail_date) 이에요
+    - [삼월 구일 토요일](detail_date) 이에요
+    - [오월 사일](detail_date) 이에요
+    - [삼월 이십팔일](detail_date) [목요일](detail_date) 이요
+    - [6월 5일](detail_date) [목요일](detail_date) 이요
+    - [삼월 구일](detail_date) 이요
+    - [10월 8일](detail_date) 이요
+    - [8월 20일](detail_date) 이요
+    - [1월 20일](detail_date) 이요
+    - [2월 31일](detail_date) 이요
     - [어제](detail_date)
     - [초등학교 6학년 때](detail_date)
     - [엄마 없을 때](detail_date)
-    - [이번 년도](detail_date)요
-    - [2021년도](detail_date)요
-    - [올해 여름](detail_date)이요
-    - [올해 겨울](detail_date)이요
-    - [올해 가을](detail_date)이요
-    - [올해 봄](detail_date)이요
+    - [이번 년도](detail_date) 요
+    - [2021년도](detail_date) 요
+    - [올해 여름](detail_date) 이요
+    - [올해 겨울](detail_date) 이요
+    - [올해 가을](detail_date) 이요
+    - [올해 봄](detail_date) 이요
 - intent: atk+indecent
   examples: |
     - 2학년이나 3학년 때 애들이 모르잖아요. 아예 그런 관련 자체를 그때는 성교육을 받았던 때도 아니니까요. 그래서 저는 정말 아무 것도 모르고 학교에서 영화나 그런 곳에서 그런 성적인 영화가 나오니까 제가 애들한테 듣고, “그게 뭐야? 그게 뭐야?” 그러다가 [집](장소)에 가서 [박지원 씨](attacker)에게 물어봤죠. 그런데 자기가 [가르쳐주겠다고 저한테 그런 행동을 해서](indecent)

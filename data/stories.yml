@@ -37,6 +37,19 @@ stories:
   - action: utter_tanks_for_answer
   - intent: affirm
   - action: utter_ask
+  - intent: say_date
+    entities:
+    - detail_date: 어제
+  - slot_was_set:
+    - detail_date: 어제
+  - action: ask_date_form
+  - active_loop: ask_date_form
+  - slot_was_set:
+    - detail_date: 어제
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_after_date
 
 - story: start_deny
   steps:
