@@ -1,48 +1,49 @@
 body
 {
-	font-family: "Segoe UI", Arial, sans-serif;
-	background-color: #FFFFFF;
+   font-family: "Segoe UI", Arial, sans-serif;
+   background-color: #FFFFFF;
 }
 h1
 {
-	font-family: "BM Dohyeon";
-	background-color: #488bc2;
-	outline-color: Black;
-	outline-style: auto;
-	outline-width: medium;
-	width: 95%;
-	max-width: 600px;
-	color: white;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0;
-	margin-top: 0;
-	text-align: center;
-	font-size: 40px;
-	padding: 10px;
+   font-family: "BM Dohyeon";
+   background-color: #488bc2;
+   outline-color: Black;
+   outline-style: auto;
+   outline-width: medium;
+   width: 95%;
+   max-width: 600px;
+   color: white;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 0;
+   margin-top: 0;
+   text-align: center;
+   font-size: 40px;
+   padding: 10px;
 }
 h3
 {
-	color: #000000;
-	font-size: 20px;
-	margin-top: 3px;
-	text-align: center;
+   color: #000000;
+   font-size: 20px;
+   margin-top: 3px;
+   text-align: center;
 }
 #container
 {
-	height: 80%;
+   height: 80%;
 }
 #chatbox
 {
-	background-color: #9bbbd4;
-	padding: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 95%;
-	max-width: 600px;
-	height: 770px;
-	overflow-y: auto;
-	margin-top: 0px;
+   background-color: #9bbbd4;
+   padding: 10px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 95%;
+   max-width: 600px;
+   max-height: 700px;
+   height: 700px;
+   overflow-y: auto;
+   margin-top: 0px;
 }
 #chatbox::-webkit-scrollbar {
     display: none;
@@ -52,77 +53,111 @@ h3
   scrollbar-width: none;
 }
 #userInput {
-	position: fixed;
-	bottom: 20px;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	width: 95%;
-	max-width: 600px;
-	margin-top: 60px;
-	vertical-align: bottom;
+   position: fixed;
+   bottom: 20px;
+   left: 0;
+   right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   width: 95%;
+   max-width: 600px;
+   margin-top: 60px;
+   vertical-align: bottom;
 }
 #textInput {
-	height: 38px;
-	width: 90%;
-	outline-color: Black;
-	outline-style: auto;
-	outline-width: medium;
-	padding-left: 10px;
-	float: left;
-	border: none;
-	font-family: inherit;
-	font-size: 17px;
+   height: 38px;
+   width: 90%;
+   outline-color: Black;
+   outline-style: auto;
+   outline-width: medium;
+   padding-left: 10px;
+   float: left;
+   border: none;
+   font-family: inherit;
+   font-size: 17px;
 }
 #buttonInput {
-	background-color: #fef01b;
-	width: 43px;
-	height: 43px;
-	float: right;
-	font-family: inherit;
-	font-size: 17px;
-	color: black;
-	border: none;
-	cursor: pointer;
-	border-radius: 50px;
+   background-color: #fef01b;
+   width: 43px;
+   height: 43px;
+   float: right;
+   font-family: inherit;
+   font-size: 17px;
+   color: black;
+   border: none;
+   cursor: pointer;
+   border-radius: 50px;
 }
 #buttonInput:hover {
-	opacity: 0.8;
-	border-width: 1px;
-	border-color: #009688;
+   opacity: 0.8;
+   border-width: 1px;
+   border-color: #009688;
 }
 .userText {
-	color: black;
-	font-family: inherit;
-	font-size: 17px;
-	text-align: right;
-	line-height: 30px;
+   position: relative;
+   color: black;
+   font-family: inherit;
+   font-size: 17px;
+   text-align: right;
+   padding-left: 20%;
+   margin-right: 10px;
 }
 .userText span {
-	background-color: #fef01b;
-	box-shadow: 5px 5px 5px gray;
-	margin-right: 5px;
-	padding: 10px;
-	border-radius: 5px;
+   background-color: #fef01b;
+   box-shadow: 0px 5px 5px gray;
+   padding: 10px;
+   border-radius: 5px;
+   overflow-wrap: anywhere;
+   display: inline-block;
 }
+.userText:after {
+   left: 100%;
+   top: 40%;
+   border: solid transparent;
+   content: "";
+   height: 0;
+   width: 0;
+   position: absolute;
+   pointer-events: none;
+   border-color: rgba(254, 240, 27, 0);
+   border-left-color: #fef01b;
+   border-width: 10px;
+   margin-top: -10px;
+}
+
 .botText {
-	color: black;
-	font-family: inherit;
-	font-size: 17px;
-	text-align: left;
-	line-height: 30px;
+   position: relative;
+   color: black;
+   font-family: inherit;
+   font-size: 17px;
+   text-align: left;
+   margin-left: 10px;
+   padding-right: 20%;
 }
 .botText span {
-	background-color: #ffffff;
-	box-shadow: -5px 5px 5px gray;
-	margin-left: 5px;
-	padding: 10px;
-	border-radius: 5px;
+   background-color: #ffffff;
+   box-shadow: 0px 5px 5px gray;
+   padding: 10px;
+   border-radius: 5px;
+   display: inline-block;
+}
+.botText:after {
+   right: 100%;
+   top: 40%;
+   border: solid transparent;
+   content: "";
+   height: 0;
+   width: 0;
+   position: absolute;
+   pointer-events: none;
+   border-color: rgba(255, 255, 255, 0);
+   border-right-color: #ffffff;
+   border-width: 10px;
+   margin-top: -10px;
 }
 #tidbit {
-	position:absolute;
-	bottom:0;
-	right:0;
-	width: 300px;
+   position:absolute;
+   bottom:0;
+   right:0;
+   width: 300px;
 }

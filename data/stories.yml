@@ -63,6 +63,21 @@ stories:
     - requested_slot: null
   - active_loop: null
   - action: utter_ask_who
+  - intent: atk_indecent
+    entities:
+    - attacker: 박지원 씨
+    - indecent: 가르쳐주겠다고 저한테 그런 행동을 해서
+  - slot_was_set:
+    - attacker: 박지원 씨
+    - indecent: 가르쳐주겠다고 저한테 그런 행동을 해서
+  - action: ask_atk_inde_form
+  - active_loop: ask_atk_inde_form
+  - slot_was_set:
+    - attacker: 박지원 씨
+    - indecent: 가르쳐주겠다고 저한테 그런 행동을 해서
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_again
 
 
 - story: start_deny

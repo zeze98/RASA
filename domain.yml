@@ -24,10 +24,10 @@ intents:
 - deatindate_reason
 - say_cloth
 - indecent2
-- atk+indecent
 - say_date
 - say_number
 - say_location
+- atk_indecent
 entities:
 - nickname
 - hobby
@@ -138,6 +138,10 @@ forms:
   ask_location_form:
     required_slots:
     - location
+  ask_atk_inde_form:
+    required_slots:
+    - attacker
+    - indecent
 responses:
   utter_fallback:
   - text: '잘못입력하셨습니다.'
@@ -171,12 +175,13 @@ responses:
   utter_introduce_askhobby:
   - text: '안녕하세요~ 저는 {nickname}님과 대화하고 싶은 챗봇입니다. 오늘 {nickname}님께서 하시고 싶은 이야기를 편하게 저에게 말씀해 주시면 됩니다. :) 대화를 하기전에 가볍게 ice breaking 부터 할까요? {nickname}님은 취미로 무엇을 하는게 좋으신가요?'
   utter_ask_when:
-  - text: '언제 무슨일이 있으셨나요?'
+  - text: '언제 일어난 일인가요?'
   utter_ask_where:
   - text: '{detail_date} 어디서 그랬나요?'
   utter_ask_who:
-  - text: '{detail_date} {location} 누가 그랬나요?'
-
+  - text: '{detail_date} {location} 누가 어떻게 {nickname}님에게 무엇을 했나요?'
+  utter_ask_again:
+  - text: '그렇군요.. 그뒤로 무슨일이 있으셨나요?'
 actions:
 - utter_ask_nickname
 - utter_introduce_askhobby
