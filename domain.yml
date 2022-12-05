@@ -135,9 +135,9 @@ forms:
   ask_date_form:
     required_slots:
     - detail_date
-  ask_attacker_form:
+  ask_location_form:
     required_slots:
-    - attacker
+    - location
 responses:
   utter_fallback:
   - text: '잘못입력하셨습니다.'
@@ -170,10 +170,13 @@ responses:
   - text: '{nickname}님이 좋아하시는 것에 대해서 너무 잘 말씀해주셔서 감사합니다. 덕분에 제가 {nickname}님에 대해서 조금 더 잘 알게 된 것 같아요 :) 지금부터는 {nickname}님께서 오늘 저에게 해주실 이야기를 처음부터 끝까지 사실 그대로 말씀해주세요'
   utter_introduce_askhobby:
   - text: '안녕하세요~ 저는 {nickname}님과 대화하고 싶은 챗봇입니다. 오늘 {nickname}님께서 하시고 싶은 이야기를 편하게 저에게 말씀해 주시면 됩니다. :) 대화를 하기전에 가볍게 ice breaking 부터 할까요? {nickname}님은 취미로 무엇을 하는게 좋으신가요?'
-  utter_ask:
+  utter_ask_when:
   - text: '언제 무슨일이 있으셨나요?'
-  utter_after_date:
-  - text: '{detail_date} 누가 그랬나요?'
+  utter_ask_where:
+  - text: '{detail_date} 어디서 그랬나요?'
+  utter_ask_who:
+  - text: '{detail_date} {location} 누가 그랬나요?'
+
 actions:
 - utter_ask_nickname
 - utter_introduce_askhobby

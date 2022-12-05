@@ -36,7 +36,7 @@ stories:
   - intent: answer_when
   - action: utter_tanks_for_answer
   - intent: affirm
-  - action: utter_ask
+  - action: utter_ask_when
   - intent: say_date
     entities:
     - detail_date: 어제
@@ -49,7 +49,21 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: utter_after_date
+  - action: utter_ask_where
+  - intent: say_location
+    entities:
+    - location: 거실
+  - slot_was_set:
+    - detail_date: 거실
+  - action: ask_location_form
+  - active_loop: ask_loaction_form
+  - slot_was_set:
+    - detail_date: 거실
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_who
+
 
 - story: start_deny
   steps:
