@@ -63,21 +63,6 @@ stories:
     - requested_slot: null
   - active_loop: null
   - action: utter_ask_who
-  - intent: atk_indecent
-    entities:
-    - attacker: 박지원 씨
-    - indecent: 가르쳐주겠다고 저한테 그런 행동을 해서
-  - slot_was_set:
-    - attacker: 박지원 씨
-    - indecent: 가르쳐주겠다고 저한테 그런 행동을 해서
-  - action: ask_atk_inde_form
-  - active_loop: ask_atk_inde_form
-  - slot_was_set:
-    - attacker: 박지원 씨
-    - indecent: 가르쳐주겠다고 저한테 그런 행동을 해서
-  - slot_was_set:
-    - requested_slot: null
-  - action: utter_ask_again
 
 
 - story: start_deny
@@ -98,3 +83,79 @@ stories:
   - intent: deny
   - action: utter_rename
   - action: action_restart
+
+- story: interactive_story_1
+  steps:
+  - intent: start
+  - action: utter_ask_nickname
+  - intent: saying_nickname
+    entities:
+    - nickname: 김박한여정
+    - PS: 김박한여정
+  - action: ask_nickname_form
+  - active_loop: ask_nickname_form
+  - slot_was_set:
+    - nickname: 김박한여정
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_check_nickname
+  - intent: affirm
+  - action: utter_introduce_askhobby
+  - intent: saying_hobby
+    entities:
+    - hobby: 축구가
+  - slot_was_set:
+    - hobby: 축구가
+  - action: ask_hobby_form
+  - active_loop: ask_hobby_form
+  - slot_was_set:
+    - hobby: 축구가
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_askwhy
+  - intent: answer_why
+  - action: utter_askwhen
+  - intent: answer_when
+  - action: utter_tanks_for_answer
+  - intent: affirm
+  - action: utter_ask_when
+  - intent: say_date
+    entities:
+    - detail_date: 10월 8일
+    - DT: 10월 8일
+  - slot_was_set:
+    - detail_date: 10월 8일
+  - action: ask_date_form
+  - active_loop: ask_date_form
+  - slot_was_set:
+    - detail_date: 10월 8일
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_where
+  - intent: say_location
+    entities:
+    - location: 교실
+  - slot_was_set:
+    - location: 교실
+  - action: ask_location_form
+  - active_loop: ask_location_form
+  - slot_was_set:
+    - location: 교실
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_who
+  - intent: atk+indecent
+    entities:
+    - indecent: 가르쳐주겠다고 저한테 그런 행동을 했어요
+    - attacker: 김아무개
+  - action: utter_ask_again
+  - intent: indecent2
+    entities:
+      - nextindecent: 당하고 그걸 쌋어요
+  - action: utter_ask_cloth
+  - intent: say_cloth
+  - action: utter_endcard
