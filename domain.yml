@@ -3,42 +3,42 @@ intents:
 - affirm
 - answer_when
 - answer_why
+- atk+indecent
+- attacker
 - bot_challenge
+- clothed
+- date
+- deatindate_reason
 - deny
+- detail_date
+- emotion
 - goodbye
 - greet
+- indecent
+- indecent2
+- location
 - mood_great
 - mood_unhappy
+- say_cloth
+- say_date
+- say_emotion
+- say_location
+- say_number
+- say_regist
 - saying_hobby
 - saying_nickname
 - start
-- location
-- date
-- clothed
-- indecent
-- emotion
-- attacker
-- detail_date
-- say_emotion
-- say_regist
-- deatindate_reason
-- say_cloth
-- indecent2
-- say_date
-- say_number
-- say_location
-- atk_indecent
 entities:
 - nickname
-- hobby
+- indecent
+- detail_date
 - location
+- hobby
 - date
 - number
-- detail_date
 - attacker
 - cloth
 - appearance
-- indecent
 - indecent2
 - regist
 - emotion
@@ -75,56 +75,56 @@ slots:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: indecent
+    - type: from_entity
+      entity: indecent
   number:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: number
+    - type: from_entity
+      entity: number
   cloth:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: cloth
+    - type: from_entity
+      entity: cloth
   regist:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: regist
+    - type: from_entity
+      entity: regist
   emotion:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: emotion
+    - type: from_entity
+      entity: emotion
   location:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: location
+    - type: from_entity
+      entity: location
   detail_date:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: detail_date
+    - type: from_entity
+      entity: detail_date
   appearance:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: appearance
+    - type: from_entity
+      entity: appearance
   nextindecent:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: nextindecent
+    - type: from_entity
+      entity: nextindecent
 forms:
   ask_nickname_form:
     required_slots:
@@ -138,58 +138,84 @@ forms:
   ask_location_form:
     required_slots:
     - location
-  ask_atk_inde_form:
+  ask_attacker_form:
     required_slots:
     - attacker
+  ask_indecent_form:
+    required_slots:
     - indecent
+  ask_number_form:
+    required_slots:
+    - number
+  ask_cloth_form:
+    required_slots:
+    - cloth
+  ask_regist_form:
+    required_slots:
+    - regist
+  ask_emotion_form:
+    required_slots:
+    - emotion
+  ask_appearance_form:
+    required_slots:
+    - appearance
+  ask_nextindecent_form:
+    required_slots:
+    - nextindecent
 responses:
   utter_fallback:
-  - text: '잘못입력하셨습니다.'
+  - text: 잘못입력하셨습니다.
   utter_ask_nickname:
-  - text: '사용하실 닉네임을 입력해주세요'
+  - text: 사용하실 닉네임을 입력해주세요
   utter_check_nickname:
   - text: '{nickname}님이 맞나요?'
   utter_greet:
-  - text: '안녕하세요~ {nickname}님 반가워요.'
+  - text: 안녕하세요~ {nickname}님 반가워요.
   utter_cheer_up:
   - text: 힘이날만한 사진을 찾았어요.
     image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
   - text: '{nickname}님에게 도움이 되었나요?'
   utter_happy:
-  - text: '좋아~'
+  - text: 좋아~
   utter_goodbye:
-  - text: '안녕히가세요 {nickname}님 (rasa bot end...)'
+  - text: 안녕히가세요 {nickname}님 (rasa bot end...)
   utter_iamabot:
-  - text: '나는 봇 .. 내심장은 rasa 아버지는 ice'
+  - text: 나는 봇 .. 내심장은 rasa 아버지는 ice
   utter_default:
-  - text: '죄송합니다 잘 이해하지 못했습니다. 다시 입력해 주세요.'
+  - text: 죄송합니다 잘 이해하지 못했습니다. 다시 입력해 주세요.
   utter_rename:
-  - text: '닉네임을 잘못 입력하셨나 보네요. "시작" 부터 다시 입력해주세요.'
+  - text: 닉네임을 잘못 입력하셨나 보네요. "시작" 부터 다시 입력해주세요.
   utter_askwhy:
   - text: '{hobby} 좋은 이유가 뭔가요?'
   utter_askwhen:
-  - text: '어떨때 많이 하나요?'
+  - text: 어떨때 많이 하나요?
   utter_tanks_for_answer:
   - text: '{nickname}님이 좋아하시는 것에 대해서 너무 잘 말씀해주셔서 감사합니다. 덕분에 제가 {nickname}님에 대해서 조금 더 잘 알게 된 것 같아요 :) 지금부터는 {nickname}님께서 오늘 저에게 해주실 이야기를 처음부터 끝까지 사실 그대로 말씀해주세요'
   utter_introduce_askhobby:
-  - text: '안녕하세요~ 저는 {nickname}님과 대화하고 싶은 챗봇입니다. 오늘 {nickname}님께서 하시고 싶은 이야기를 편하게 저에게 말씀해 주시면 됩니다. :) 대화를 하기전에 가볍게 ice breaking 부터 할까요? {nickname}님은 취미로 무엇을 하는게 좋으신가요?'
+  - text: 안녕하세요~ 저는 {nickname}님과 대화하고 싶은 챗봇입니다. 오늘 {nickname}님께서 하시고 싶은 이야기를 편하게 저에게 말씀해 주시면 됩니다. :) 대화를 하기전에 가볍게 ice breaking 부터 할까요? {nickname}님은 취미로 무엇을 하는게 좋으신가요?
   utter_ask_when:
-  - text: '언제 일어난 일인가요?'
+  - text: 언제 무슨일이 있으셨나요?
   utter_ask_where:
   - text: '{detail_date} 어디서 그랬나요?'
   utter_ask_who:
-  - text: '{detail_date} {location} 누가 어떻게 {nickname}님에게 무엇을 했나요?'
+  - text: '{detail_date} {location} 누가 그랬나요?'
   utter_ask_again:
-  - text: '그렇군요.. 그뒤로 무슨일이 있으셨나요?'
+  - text: '그래서 어떻게 되었나요?'
+  utter_ask_cloth:
+  - text: '그 사람의 착장은 어떠했나요?'
+  utter_endcard:
+  - text: '감사합니다'
 actions:
 - utter_ask_nickname
-- utter_introduce_askhobby
+- utter_ask_when
+- utter_ask_where
+- utter_ask_who
 - utter_askwhen
 - utter_askwhy
 - utter_check_nickname
+- utter_introduce_askhobby
 - utter_tanks_for_answer
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
