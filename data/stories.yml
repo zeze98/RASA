@@ -36,7 +36,7 @@ stories:
   - intent: answer_when
   - action: utter_tanks_for_answer
   - intent: affirm
-  - action: utter_ask_when
+  - action: utter_ask_first
   - intent: say_date
     entities:
     - detail_date: 어제

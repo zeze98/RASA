@@ -72,7 +72,7 @@ slots:
     - type: from_entity
       entity: attacker
   indecent:
-    type: text
+    type: list
     influence_conversation: false
     mappings:
       - type: from_entity
@@ -120,7 +120,7 @@ slots:
       - type: from_entity
         entity: appearance
   nextindecent:
-    type: text
+    type: list
     influence_conversation: false
     mappings:
       - type: from_entity
@@ -177,11 +177,13 @@ responses:
   utter_ask_when:
   - text: '언제 일어난 일인가요?'
   utter_ask_where:
-  - text: '{detail_date} 어디서 그랬나요?'
+  - text: '어디서 그랬나요?'
   utter_ask_who:
   - text: '{detail_date} {location} 누가 어떻게 {nickname}님에게 무엇을 했나요?'
   utter_ask_again:
   - text: '그렇군요.. 그뒤로 무슨일이 있으셨나요?'
+  utter_first_ask:
+  - text: '{nickname}님 무슨일이 있으셨나요?'
 actions:
 - utter_ask_nickname
 - utter_introduce_askhobby
