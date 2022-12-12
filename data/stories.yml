@@ -56,4 +56,42 @@ stories:
   - action: utter_tanks_for_answer
   - intent: affirm
   - action: utter_ask_first
-
+  - intent: say_date_attacker
+    entities:
+    - detail_date: 어제
+    - attacker: 민우오빠가
+  - slot_was_set:
+    - attacker: 민우오빠가
+  - slot_was_set:
+    - detail_date: 어제
+  - action: check_form
+  - active_loop: check_form
+  - slot_was_set:
+    - attacker: 민우오빠가
+  - slot_was_set:
+    - detail_date: 어제
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_where
+  - intent: say_location
+    entities:
+    - location: 오빠 집
+  - slot_was_set:
+    - location: 오빠 집
+  - action: utter_ask_indecent
+  - intent: say_indecent
+    entities:
+    - indecent: 저한테
+    - indecent: 가까이
+    - indecent: 기울이면서
+    - indecent: 문지르면서
+    - indecent: 비볐어요
+  - slot_was_set:
+    - indecent:
+      - 저한테
+      - 가까이
+      - 기울이면서
+      - 문지르면서
+      - 비볐어요
+  - action: utter_finally_check

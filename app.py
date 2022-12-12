@@ -17,6 +17,7 @@ def get_bot_response():
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
     response = requests.post('http://localhost:5005/webhooks/rest/webhook', data=data, headers=headers)
     response = response.json()
+
     return str(response[0]['text'])
 
 
