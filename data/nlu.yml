@@ -15,6 +15,8 @@ nlu:
     - 자주하지
     - 걸어갈때 자주 들어요
     - 시간 날때마다 들어
+    - 매일 들어요
+    - 매일 들어
 - intent: answer_why
   examples: |
     - 물속에 있으면 자유롭다고 느껴
@@ -45,6 +47,7 @@ nlu:
     - 난 [독서가](hobby) 취미야
     - 나는 [노래듣는게](hobby) 좋아
     - 나는 [노래가](hobby) 좋아
+    - 나는 [노래듣는게](hobby) 좋아
 - intent: saying_nickname
   examples: |
     - [박현도](nickname)
