@@ -28,12 +28,13 @@ intents:
 - saying_hobby
 - saying_nickname
 - start
+- say_mix
 entities:
 - nickname
+- hobby
 - indecent
 - detail_date
 - location
-- hobby
 - date
 - number
 - attacker
@@ -162,6 +163,12 @@ forms:
   ask_nextindecent_form:
     required_slots:
     - nextindecent
+  check_form:
+    required_slots:
+    - location
+    - attacker
+    - indecent
+    - detail_date
 responses:
   utter_fallback:
   - text: 잘못입력하셨습니다.
@@ -195,17 +202,19 @@ responses:
   utter_introduce_askhobby:
   - text: 안녕하세요~ 저는 {nickname}님과 대화하고 싶은 챗봇입니다. 오늘 {nickname}님께서 하시고 싶은 이야기를 편하게 저에게 말씀해 주시면 됩니다. :) 대화를 하기전에 가볍게 ice breaking 부터 할까요? {nickname}님은 취미로 무엇을 하는게 좋으신가요?
   utter_ask_when:
-  - text: 언제 무슨일이 있으셨나요?
+  - text: 언제 있었던 일인가요?
   utter_ask_where:
-  - text: '어디서 그랬나요?'
+  - text: 어디에서 일어난 일인가요?
   utter_ask_who:
-  - text: '{detail_date} {location} 누가 그랬나요?'
+  - text: 누가 그랬나요?
   utter_ask_again:
-  - text: '그렇군요.. 그뒤로 무슨일이 있으셨나요?'
-  utter_first_ask:
+  - text: 그렇군요.. 그뒤로 무슨일이 있으셨나요?
+  utter_ask_first:
   - text: '{nickname}님 무슨일이 있으셨나요?'
-
+  utter_finally_check:
+    - text: '{attacker}가 {datail_date}에 {location}에서 {nickname}님을 {indecent} 를 하셧다는거군요 대답해주셔서 감사합니다 많은 도움이 되었어요. 준비된 질문은 여기서 끝입니다. 종료를 하시려면 종료를 입력해주세요'
 actions:
+- utter_ask_first
 - utter_ask_nickname
 - utter_ask_when
 - utter_ask_where
@@ -215,6 +224,8 @@ actions:
 - utter_check_nickname
 - utter_introduce_askhobby
 - utter_tanks_for_answer
+- utter_finally_check
+- utter_ask_again
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

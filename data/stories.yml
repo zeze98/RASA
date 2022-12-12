@@ -156,6 +156,44 @@ stories:
   - intent: indecent2
     entities:
       - nextindecent: 당하고 그걸 쌋어요
-  - action: utter_ask_cloth
-  - intent: say_cloth
-  - action: utter_endcard
+
+- story: story_test
+  steps:
+  - intent: start
+  - action: utter_ask_nickname
+  - intent: saying_nickname
+    entities:
+    - nickname: 김박한여정
+  - action: ask_nickname_form
+  - active_loop: ask_nickname_form
+  - slot_was_set:
+    - nickname: 김박한여정
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_check_nickname
+  - intent: affirm
+  - action: utter_introduce_askhobby
+  - intent: saying_hobby
+    entities:
+    - hobby: 노래가
+  - slot_was_set:
+    - hobby: 노래가
+  - action: ask_hobby_form
+  - active_loop: ask_hobby_form
+  - slot_was_set:
+    - hobby: 노래가
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_askwhy
+  - intent: answer_why
+  - action: utter_askwhen
+  - intent: answer_when
+  - action: utter_tanks_for_answer
+  - intent: affirm
+  - action: utter_ask_first
+  - intent: say_mix
+  - action: check_form
+
+
